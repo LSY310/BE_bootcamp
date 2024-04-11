@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0px;
+}
+.container{
+    height: 100%;
+    background-color: rgb(241, 182, 233);
+}
+
+.chat-screen{
+    height: calc(100% - 80px);
+}
+.user{
+    background-color: white;
+    padding: 16px;
+    height: 90px;
+}
+.user__column{
+    float: left;
+}
+.user__pic{
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: rgb(241, 182, 233);
+}
+.user__nick, .user__count{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 5px;
+}
+.user__nick{
+    font-size: 20px;
+}
+.user__count{
+    font-size: 14px;
+    color: gray;
+}
+
+.chat-form{
+    height: 80px;
+    background-color: white;
+}
+.chat-form__field{
+    height: 80px;
+    background-color: white;
+}
+.chat-form__msg{
+    float: left;
+    width:calc(100% - 80px);
+    height: 80px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    resize: none;
+    background-color: white;
+    
+}
+.chat-form__bt{
+    float:right;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    background-color: rgb(241, 182, 233);
+    font-size: 18px;}
+.chat-form__bt:active{
+    background-color: rgb(242, 171, 232);
+}
+
+.chat-form__msg:focus{
+    outline: none;
+}

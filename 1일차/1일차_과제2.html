@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>설문조사 양식</title>
+    </head>
+    <body>
+        <header>
+            <h1>설문조사 양식</h1>
+            <p>모든 항목에 빠짐없이 체크해주십시오.</p>
+        </header>
+        <hr/>
+        <main>
+            <form>
+                <fieldset>
+                    <legend>개인정보</legend>
+                    <label for="name">이름</label>
+                    <input type="text" name="name" id="name" placeholder="본명을 입력하세요">
+                    <br>
+                    <label for="email">이메일</label>
+                    <input type="email" name="email" id="email" placeholder="메일 주소를 입력하세요">
+                </fieldset>
+                <fieldset>
+                    <legend>설문</legend>
+                    <p>가입경로</p>
+                    <input type="checkbox" id="p1" name="path">
+                    <lable for ="p1">간판</lable>
+                    <input type="checkbox" id="p2" name="path">
+                    <lable for ="p2">전단지</lable>
+                    <input type="checkbox" id="p3" name="path">
+                    <lable for ="p3">소개</lable>
+                    <input type="checkbox" id="p4" name="path">
+                    <lable for ="p4">인터넷</lable>
+
+                    <p>운동목적</p>
+                    <input type="checkbox" id="pu1" name="purpose">
+                    <lable for ="pu1">다이어트</lable>
+                    <input type="checkbox" id="pu2" name="purpose">
+                    <lable for ="pu2">근육증가</lable>
+                    <input type="checkbox" id="pu3" name="purpose">
+                    <lable for ="pu3">재활교정</lable>
+                    <input type="checkbox" id="pu4" name="purpose">
+                    <lable for ="pu4">바디프로필</lable>
+
+                    <p>헬스장 선택 이유</p>
+                    <input type="checkbox" id="r1" name="reason">
+                    <lable for ="r1">운동기구</lable>
+                    <input type="checkbox" id="r2" name="reason">
+                    <lable for ="r2">접근성</lable>
+                    <input type="checkbox" id="r3" name="reason">
+                    <lable for ="r3">강사진</lable>
+                    <input type="checkbox" id="r4" name="reason">
+                    <lable for ="r4">개인 샤워실</lable>
+
+                </fieldset>
+                <fieldset>
+                    <legend>기타 의견</legend>
+                    <textarea rows="3" cols="30" name="comment"></textarea>
+                </fieldset>
+                <input type="submit">
+            </form>
+        </main>
+        <hr>
+        <footer>
+            <p>입력하느라 수고하셨습니다.</p>
+        </footer>
+    </body>
+</html>
