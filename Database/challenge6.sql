@@ -1,0 +1,43 @@
+-- use yes24;
+-- select title, author from books;
+-- select * from books where rating >=8.0;
+-- select title, review from books where review>=100 order by review desc;
+-- select title, price from books where price < 20000;
+-- select * from books where ranking_weeks >=4 order by ranking_weeks desc;
+-- select * from books where author='김창완 저';
+-- select * from books where publisher='웅진지식하우스';
+-- select author, count(*) from books group by author order by count(*) desc;
+-- SELECT publisher, COUNT(*) AS num_books FROM Books GROUP BY publisher ORDER BY num_books DESC LIMIT 1;
+-- SELECT author, AVG(rating) AS avg_rating FROM Books GROUP BY author ORDER BY avg_rating DESC LIMIT 1;
+-- SELECT title, author FROM Books WHERE ranking = 1;
+-- SELECT title, sales, review FROM Books ORDER BY sales DESC, review DESC LIMIT 10;
+-- SELECT title, publishing FROM Books ORDER BY publishing DESC LIMIT 5;
+-- select author, avg(rating) from books group by author;
+-- select publishing, count(*) from books group by publishing;
+-- select title, avg(price) from books group by title;
+-- select title from books order by review desc limit 5;
+-- select ranking, avg(review) from books group by ranking;
+-- select title from books where rating>(select avg(rating) from books);
+-- select title, price from books where price>(select avg(price) from books);
+-- select title from books where review>(select max(review) from books);
+-- select title, sales from books where sales<(select avg(sales) from books);
+-- select title, author, publishing from books where author=(select author from books group by author order by count(*) desc limit 1) order by publishing desc limit 1;
+-- UPDATE Books SET price = 30000 WHERE title = '';
+-- UPDATE Books SET title = '' WHERE author = '';
+-- delete from books where sales=(select min(sales) from books);
+-- update books set rating = rating+1 where publisher = '';
+-- select author, avg(rating), avg(sales) from books group by author order by avg(rating) desc, avg(sales) desc;
+-- SELECT publishing, AVG(price) as avg_price FROM Books GROUP BY publishing;
+-- select publishing, count(*), avg(review) from books group by publishing;
+-- select ranking, avg(sales) from books;
+-- select price, avg(review),avg(rating) from books group by price;
+-- select publisher, author, avg(sales) from books group by publisher, author order by avg(sales) desc;
+-- select title from books where review>(select avg(review) from books) and price<(select avg(price) from books);
+-- select author, count(distinct title) from books group by author order by count(distinct title) desc limit 1; 
+-- select title, author, max(sales) from books group by author,title;
+-- select publishing, avg(sales), count(*) from books group by publishing order by count(*) desc;
+-- select publisher, max(rating)-min(rating) as minus from books group by publisher order by minus desc limit 1; 
+-- select title, rating/sales from books where author='' order by ratio desc limit 1;
+
+
+
