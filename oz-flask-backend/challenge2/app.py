@@ -4,6 +4,7 @@ from api import book_blp
 
 app = Flask(__name__)
 
+# OpenAPI 관련 설정
 app.config['API_TITLE'] = 'Book API'
 app.config['API_VERSION'] = 'v1'
 app.config['OPENAPI_VERSION'] = '3.0.2'

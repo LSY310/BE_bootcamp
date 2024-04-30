@@ -19,7 +19,7 @@ def create_one_feed():
     print(name, age)
     return jsonify({'result':'success'})
 
-items = [{"items":[{"name": "item1", "price": 10}]}]
+datas = [{"items":[{"name": "item1", "price": 10}]}]
 
 @app.route("/api/v1/datas", methods=['GET'])
 def get_datas():
