@@ -23,13 +23,14 @@ from datetime import datetime
 main = Blueprint("main", __name__)
 admin = Blueprint("admin", __name__, url_prefix="/admin/")
 
-
+# 기본 경로에 대한 라우트
 @main.route("/", methods=["GET"])
 def home():
     # 참여자 정보 입력 페이지를 렌더링합니다.
     return render_template("index.html")
 
-
+# 다른 경로에 대한 라우트
+# 127.0.0.1:5000/participants
 @main.route("/participants", methods=["POST"])
 def add_participant():
     data = request.get_json()
@@ -44,7 +45,7 @@ def add_participant():
         {"redirect": url_for("main.quiz"), "participant_id": new_participant.id}
     )
 
-
+# 127.0.0.1:5000/quiz
 @main.route("/quiz")
 def quiz():
     # 퀴즈 페이지를 렌더링합니다. 참여자 ID 쿠키가 필요합니다.
@@ -57,7 +58,7 @@ def quiz():
     questions_list = [question.content for question in questions]
     return render_template("quiz.html", questions=questions_list)
 
-
+# 127.0.0.1:5000/submit
 @main.route("/submit", methods=["POST"])
 def submit():
     # 참여자 ID가 필요합니다.
