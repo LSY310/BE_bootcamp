@@ -30,7 +30,7 @@ def home():
     return render_template("index.html")
 
 # 다른 경로에 대한 라우트
-# 127.0.0.1:5000/participants
+# 기본경로에서 사용자가 값을 입력하고 제출 버튼을 누르면 post함
 @main.route("/participants", methods=["POST"])
 def add_participant():
     data = request.get_json()
