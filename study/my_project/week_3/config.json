@@ -1,0 +1,11 @@
+{
+    "databases": {
+        "db": {
+            "username": "root",
+            "password": "0310",
+            "host": "localhost",
+            "port": 3306,
+            "db_name": "airportdb"
+        }
+    }
+}
