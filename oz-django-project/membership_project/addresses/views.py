@@ -4,8 +4,12 @@ from rest_framework import status
 from .models import Address
 from .serializers import AddressSerializer
 from rest_framework.exceptions import NotFound
+from rest_framework.authentication import TokenAuthentication # 사용자 인증 (추가)
+from rest_framework.permissions import IsAuthenticated # 권한 부여 (추가)
 
 class AddressList(APIView):
+    authentication_classes = [TokenAuthentication] # 추가
+    permission_classes = [IsAuthenticated] # 추가
     def get(self, request):
         address=Address.objects.all()
         selializer=AddressSerializer(address, many=True)
