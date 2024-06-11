@@ -138,3 +138,11 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication', # 추가
     ],
 }
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=14),
+    "SIGNING_KEY": "SECRET",
+    "ALGORITHM": "HS256",
+    "AUTH_HEADER_TYPES": ("Bearer",),
+}
